@@ -1,0 +1,561 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+
+body {
+    width: 100%;
+    height: 1500px;
+    background: lightgray;
+    font-family: 'Lato', sans-serif;
+}
+/*------------ İcon kısmı --------------*/
+
+#icon-popup {
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: whitesmoke;
+    height: 60px;
+    width: 60px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1px 2px 5px 0.1px #2e2e2e;
+}
+
+#check {
+    display: flex;
+    justify-content: center;
+    line-height: 60px;
+    color: blue;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+
+
+/*------------ Live chat kısmı  --------------*/
+
+#livechat {
+
+    position: fixed;
+
+    bottom: 10px;
+
+    right: 10px;
+
+    width: 350px;
+
+    height: 600px;
+
+    background: #f2f6fb;
+
+    display: none;
+
+    z-index: 2;
+
+    border-radius: 10px;
+
+
+
+}
+
+#chathead {
+
+    width: 100%;
+
+    height: 35%;
+
+    background-color: #4b88a6;
+
+    background-image: linear-gradient(90deg, #251bf8, rgba(37, 27, 255, 0.81));
+
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+#minimizeicon {
+
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 15px 10px 0 0;
+    padding: 0px 0 10px 0;
+    color: whitesmoke;
+
+}
+
+#yazibaslik {
+
+    line-height: 60px;
+
+    margin-left: 30px;
+
+    color: whitesmoke;
+
+    font-size: 25px;
+
+    font-weight: 400;
+
+    text-align: center;
+
+}
+
+#altbaslik{
+
+    color: #d8d8d8;
+
+    font-weight: 400;
+
+    margin-top: -50px;
+
+    margin-left: 30px;
+
+    font-size: 15px;
+
+}
+
+
+
+#etiket {
+
+    margin-left: 30px;
+
+    margin-top: 15px;
+
+    color: whitesmoke;
+
+}
+
+#divisim{
+
+    margin-top:-20px;
+
+}
+.card {
+
+    background: #f2f6fb;
+
+}
+
+#chatbody {
+
+    padding: 30px 10px;
+
+    background: #f2f6fb;
+
+    border-radius: 10px;
+
+    height: 52%;
+
+    transition: 0.3s;
+
+
+
+}
+#giris{
+
+    width: 90%;
+
+    background-color: #fdfdfd;
+
+    position: absolute;
+
+    margin-top: -70px;
+
+    margin-left: 5px;
+
+    border-top: 2px solid #0000cb;
+
+    border-radius: 8px;
+
+
+
+}
+
+.yazilar {
+
+    padding-top: 5px;
+
+    font-size: 80%;
+
+    margin: 0px;
+
+}
+
+.yildiz {
+
+    font-weight: bold;
+
+    margin-right: 100px;
+
+}
+
+.txtbox {
+
+    width: 95%;
+
+    border-radius: 3px;
+
+    border: 1px solid gray;
+
+    background: transparent;
+
+    margin: 0 0 10px 0;
+
+    outline: 0;
+
+    padding: 5px;
+
+}
+
+.txtbox:hover, .txtbox:focus {
+
+    border: 1px solid #00CED1;
+
+    transition: .3s;
+
+}
+
+#isimetiket,#epsotaetiket{
+
+    font-size: 25px;
+
+    margin-left: 10px;
+
+    margin-top: 10px;
+
+}
+
+#isim,#eposta{
+
+    width: 70%;
+
+}
+
+.start_chat {
+
+    width: 55%;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(37, 27, 255, 0.87);
+
+    outline: 0;
+
+    padding: 5px;
+
+    margin-top: -15px;
+
+}
+
+.start_chat:hover {
+
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+
+    opacity: 0.9;
+
+    transition: .3s;
+
+}
+
+#footer {
+
+    width: 100%;
+
+    height: 7%;
+
+    background-color: rgba(222, 222, 222, 0.44);
+
+    display: table;
+
+    position: absolute;
+
+    bottom: 0;
+
+    border-radius: 0 0 10px 10px;
+
+    opacity: 0.6;
+
+}
+
+#footer p {
+
+    text-align: center;
+
+    color: black;
+
+    vertical-align: middle;
+
+    display: table-cell;
+
+    font-weight: 500;
+
+    font-size: 100%;
+
+}
+
+.messages {
+
+    background: #f2f6fb;
+
+}
+
+.hm-gradient {
+
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+
+}
+
+.darken-grey-text {
+
+    color: #2E2E2E;
+
+}
+
+.danger-text {
+
+    color: #ff3547;
+
+}
+
+.default-text {
+
+    color: #2BBBAD;
+
+}
+
+.info-text {
+
+    color: #33b5e5;
+
+}
+
+.form-white .md-form label {
+
+    color: white;
+
+}
+
+.form-white input[type=text]:focus:not([readonly]) {
+
+    border-bottom: 1px solid #fff;
+
+    -webkit-box-shadow: 0 1px 0 0 #fff;
+
+    box-shadow: 0 1px 0 0 #fff;
+}
+
+.form-white input[type=text]:focus:not([readonly]) + label {
+
+    color: #fff;
+
+}
+
+.form-white input[type=password]:focus:not([readonly]) {
+
+    border-bottom: 1px solid #fff;
+
+    -webkit-box-shadow: 0 1px 0 0 #fff;
+
+    box-shadow: 0 1px 0 0 #fff;
+
+}
+
+.form-white input[type=password]:focus:not([readonly]) + label {
+
+    color: #fff;
+
+}
+
+.form-white input[type=password], .form-white input[type=text] {
+
+    border-bottom: 1px solid #fff;
+
+}
+
+.form-white .form-control:focus {
+
+    color: #fff;
+
+}
+
+.form-white .form-control {
+
+    color: #fff;
+
+}
+
+.form-white textarea.md-textarea:focus:not([readonly]) {
+
+    border-bottom: 1px solid #fff;
+
+    box-shadow: 0 1px 0 0 #fff;
+
+    color: #fff;
+
+}
+
+.form-white textarea.md-textarea {
+
+    border-bottom: 1px solid #fff;
+
+    color: #fff;
+
+}
+
+.form-white textarea.md-textarea:focus:not([readonly]) + label {
+
+    color: #fff;
+}
+
+.ripe-malinka-gradient {
+
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+
+}
+
+
+
+.near-moon-gradient {
+
+    background-image: linear-gradient(to bottom, #5ee7df 0%, #b490ca 100%);
+
+}
+
+
+
+.girisyazi {
+
+    color: #767676;
+
+    font-size: 15px;
+
+    margin-bottom: 30px;
+
+}
+
+.telefonetiket{
+
+
+
+    margin-right:10px;
+
+
+
+}
+
+#labelisim,#labeleposta{
+
+    color: #767676;
+
+}
+
+
+
+.inputetiket {
+
+    color: #a6a6a6;
+
+    font-size: 15px;
+
+}
+
+.girisetiket {
+
+    color: #969696;
+
+    font-size: 15px;
+
+}
+
+
+
+.girisetiket:hover {
+
+
+
+    color: rgba(0, 0, 255, 0.62);
+
+}
+
+
+
+.uyari {
+
+    text-align: center;
+
+    color: rgba(250, 123, 85, 0.65);
+
+    color: #5f5f5f;
+
+    font-weight: 500;
+
+    font-size: 15px;
+
+}
+
+
+
+.etiketgonder {
+
+
+
+    justify-content: center;
+
+    font-size: 20px;
+
+    display: flex;
+
+    margin-top: 20px;
+
+    color: #a7a7a7;
+
+}
+
+.etiketgonder:hover{
+    color: #0000fd;
+}
+
+.select_admin {
+    margin-top: 5%;
+    height: 12%;
+    width: auto;
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+.selected_admin{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#adminyok{
+    color: whitesmoke;
+    font-weight: 500;
+    margin-left: 40px;
+    font-size: 15px;
+}
+.online_icon {
+
+    position: absolute;
+    height: 13px;
+    width: 13px;
+    background-color: #4cd137;
+    border-radius: 50%;
+	margin-top: 35px;
+	margin-left: -10px;
+    border: 1.5px solid white;
+}
+
+.messanger {
+    height: 325px;
+    margin-top: -20px;
+}
+.admin_all{
+    color: #eaeaea;
+    font-weight: 800;
+    text-align: center;
+}
